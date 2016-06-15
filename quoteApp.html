@@ -1,0 +1,60 @@
+<html>
+<!-- Styling -->
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="quoteApp.css" media="screen" />
+<!-- Scripts -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script type="text/javascript" src="quoteApp.js"></script>
+
+<head>
+  <title>Random Quote Generator by Shawn Stern</title>
+</head>
+
+<body>
+  <section>
+    <div id="quoteBox" class="container">
+      <div class="row text-center">
+        <h1>Quote Box</h1>
+        <p>Please enjoy! Quotes provided by <a href="http://forismatic.com/en/api/" target="_blank">Forismatic API.</a></p>
+      </div>
+      <div class="row text-center well">
+        <blockquote>
+        <!-- Image with a quote marks to contain the quote, and spans for our jquery to target and inject quote/author-->
+        <i class="fa fa-quote-left"></i><span id="quote-text"> </span>
+        <p>-<span id="author"></span></p>
+          </blockquote>
+      </div>
+      <div class="buttons row text-center">
+        <button class="btn btn-primary scaleBtn" id="quoteBtn">Give me another!</button>
+        <!-- Anchor which we can edit the href to point to depending on quote text -->
+        <a id="twitter-share" target="_blank"><button class="btn btn-danger scaleBtn" id="tweetBtn">Share to <i class="fa fa-twitter"></i></button></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT INFO SECTION -->
+    <section id="contact" class="container text-center" style="margin: 50px auto auto auto;">
+      <a name="contact" class="anchor "></a>
+      <div>
+        <h3>Contact Me</h3>
+        <ul class="contactList ">
+          <li><a href="https://www.linkedin.com/in/shawn-stern-48496747 " target='_blank'><i class="fa fa-2x fa-linkedin " aria-hidden="true "></i></a></li>
+          <li><a href="https://github.com/stern-shawn" target='_blank'><i class="fa fa-2x fa-github " aria-hidden="true "></i></a></li>
+          <li><a href="https://www.freecodecamp.com/stern-shawn" target='_blank'><i class="fa fa-2x fa-fire " aria-hidden="true "></i></a></li>
+          <li><a href="https://www.facebook.com/stern.shawn" target='_blank'><i class="fa fa-2x fa-facebook " aria-hidden="true "></i></a></li>
+          <li><a href="https://www.instagram.com/sternnn1991" target='_blank'><i class="fa fa-2x fa-instagram " aria-hidden="true "></i></a></li>
+        </ul>
+        <div>
+    </section>
+
+    <!-- FOOTER/COPYRIGHT SECTION -->
+    <footer id="copyright" class="container ">
+      <div class="row text-center ">
+        <p>© Copyright Shawn Stern 2016</p>
+      </div>
+    </footer>
+
+</body>
+
+</html>
