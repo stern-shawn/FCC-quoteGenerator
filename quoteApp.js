@@ -14,7 +14,7 @@ $(document).ready(function() {
 */
 
 // Store our json object url in one short variable for cleaner code
-jsonUrl = "http://api.forismatic.com/api/1.0/?method=getQuote&key=457653&format=jsonp&lang=en&jsonp=?";
+jsonUrl = "https://api.forismatic.com/api/1.0/?method=getQuote&key=457653&format=jsonp&lang=en&jsonp=?";
 
 // Factor out the getQuote action so we can automatically call it on page load, and manually on clicking the new quote button
 var getQuote = function(json) {
@@ -23,13 +23,13 @@ var getQuote = function(json) {
   if (author === '') {
     author = 'Unknown';
   }
-  
+
   // Update the quote and author fields by id
   $("#quote-text").text(quote);
   $("#author").text(author);
-  
+
   // update href in the twitter button to have url including this quote
-  var twitterUrl = 'https://twitter.com/intent/tweet?text=' + quote + ' -' + author;  
+  var twitterUrl = 'https://twitter.com/intent/tweet?text=' + quote + ' -' + author;
   $("#twitter-share").attr("href", twitterUrl);
 };
 
