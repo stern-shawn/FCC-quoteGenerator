@@ -1,11 +1,10 @@
 <html>
+
 <!-- Styling -->
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="quoteApp.css" media="screen" />
-<!-- Scripts -->
-<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-<script type="text/javascript" src="quoteApp.js"></script>
+<link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="./quoteApp.css" />
 
 <head>
   <title>Random Quote Generator by Shawn Stern</title>
@@ -20,10 +19,10 @@
       </div>
       <div class="row text-center well">
         <blockquote>
-        <!-- Image with a quote marks to contain the quote, and spans for our jquery to target and inject quote/author-->
-        <i class="fa fa-quote-left"></i><span id="quote-text"> </span>
-        <p>-<span id="author"></span></p>
-          </blockquote>
+          <!-- Image with a quote marks to contain the quote, and spans for our jquery to target and inject quote/author-->
+          <i class="fa fa-quote-left"></i><span id="quote-text"> </span>
+          <p>-<span id="author"></span></p>
+        </blockquote>
       </div>
       <div class="buttons row text-center">
         <button class="btn btn-primary scaleBtn" id="quoteBtn">Give me another!</button>
@@ -34,25 +33,28 @@
   </section>
 
   <!-- CONTACT INFO SECTION -->
-    <section id="contact" class="container text-center" style="margin: 50px auto auto auto;">
-      <a name="contact" class="anchor "></a>
+  <section id="contact" class="container text-center" style="margin: 50px auto auto auto;">
+    <a name="contact" class="anchor "></a>
+    <div>
+      <h3>Contact Me</h3>
+      <ul class="contactList ">
+        <li><a href="https://www.linkedin.com/in/shawn-stern-48496747 " target='_blank'><i class="fa fa-2x fa-linkedin " aria-hidden="true "></i></a></li>
+        <li><a href="https://github.com/stern-shawn" target='_blank'><i class="fa fa-2x fa-github " aria-hidden="true "></i></a></li>
+        <li><a href="https://www.freecodecamp.com/stern-shawn" target='_blank'><i class="fa fa-2x fa-fire " aria-hidden="true "></i></a></li>
+      </ul>
       <div>
-        <h3>Contact Me</h3>
-        <ul class="contactList ">
-          <li><a href="https://www.linkedin.com/in/shawn-stern-48496747 " target='_blank'><i class="fa fa-2x fa-linkedin " aria-hidden="true "></i></a></li>
-          <li><a href="https://github.com/stern-shawn" target='_blank'><i class="fa fa-2x fa-github " aria-hidden="true "></i></a></li>
-          <li><a href="https://www.freecodecamp.com/stern-shawn" target='_blank'><i class="fa fa-2x fa-fire " aria-hidden="true "></i></a></li>
-        </ul>
-        <div>
-    </section>
+  </section>
 
-    <!-- FOOTER/COPYRIGHT SECTION -->
-    <footer id="copyright" class="container ">
-      <div class="row text-center ">
-        <p>© Copyright Shawn Stern 2016</p>
-      </div>
-    </footer>
+  <!-- FOOTER/COPYRIGHT SECTION -->
+  <footer id="copyright" class="container ">
+    <div class="row text-center ">
+      <p>© Copyright Shawn Stern 2016</p>
+    </div>
+  </footer>
 
+  <!-- Scripts -->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script type="text/javascript" src="./quoteApp.js"></script>
 </body>
 
 </html>
