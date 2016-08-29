@@ -1,25 +1,13 @@
-/*
-$(document).ready(function() {
-  var getQuote = function(json) {
-    //var quote = json.quoteText;
-    //var author = json.quoteAuthor;
-    $("#quote-text").text(json.quoteText);
-    $("#author").text(json.quoteAuthor);
-  };
-
-  $("#quoteBtn").on("click", function() {  
-    $.getJSON("http://api.forismatic.com/api/1.0/?method=getQuote&key=457653&format=jsonp&lang=en&jsonp=?", getQuote);
-  });
-});
-*/
-
 // Store our json object url in one short variable for cleaner code
 // jsonUrl = "https://api.forismatic.com/api/1.0/?method=getQuote&key=457653&format=jsonp&lang=en&jsonp=?";
 jsonUrl = "https://wisdomapi.herokuapp.com/v1/random?jsonp=?";
 
 // Factor out the getQuote action so we can automatically call it on page load, and manually on clicking the new quote button
 var getQuote = function(json) {
-  console.log(json);
+  // console.log(json);
+  $("#quote-text").hide();
+  $("#author").hide();
+
   var quote = json.content;
   var author = json.author.name;
   if (author === '') {
@@ -27,8 +15,8 @@ var getQuote = function(json) {
   }
 
   // Update the quote and author fields by id
-  $("#quote-text").text(quote);
-  $("#author").text(author);
+  $("#quote-text").text(quote).fadeIn();
+  $("#author").text(author).fadeIn();
 
   // update href in the twitter button to have url including this quote
   var twitterUrl = 'https://twitter.com/intent/tweet?text="' + quote + '" - ' + author;
