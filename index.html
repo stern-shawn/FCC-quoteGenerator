@@ -17,14 +17,14 @@
         <p>Please enjoy! Quotes provided by the <a href="https://github.com/gophergala/wisdom" target="_blank">Wisdom API.</a></p>
       </div>
       <div class="row">
-          <!-- Image with a quote marks to contain the quote, and spans for our jquery to target and inject quote/author-->
-          <i class="fa fa-2x fa-quote-left"></i><span id="quote-text"> </span>
-          <p>-<span id="author"></span></p>
+        <!-- Image with a quote marks to contain the quote, and spans for our jquery to target and inject quote/author-->
+        <i id="quoteMark" class="fa fa-2x fa-quote-left"></i><span id="quoteText"> </span>
+        <p id="author"></p>
       </div>
       <div class="row">
-        <button class="btn btn-primary scaleBtn" id="quoteBtn">Give me another!</button>
+        <button class="btn btn-lg scaleBtn" id="quoteBtn">Give me another!</button>
         <!-- Anchor which we can edit the href to point to depending on quote text -->
-        <a id="twitter-share" target="_blank"><button class="btn btn-success scaleBtn" id="tweetBtn">Share to <i class="fa fa-twitter"></i></button></a>
+        <a id="twitter-share" target="_blank"><button class="btn btn-lg scaleBtn" id="tweetBtn">Share to <i class="fa fa-twitter"></i></button></a>
       </div>
     </div>
   </section>

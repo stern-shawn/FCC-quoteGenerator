@@ -1,20 +1,33 @@
 body {
   font-family: 'Abel', sans-serif;
-  background: #129fff;
+  background: #EEE;
 }
 
+/* Fixed width and auto margins on sides for centering */
 #quoteBox {
   width: 500px;
   margin: 100px auto auto auto;
 }
 
-#quote-text {
+#quoteMark {
+  color: #FF5800;
+  text-shadow: 1px 1px 1px #000;
+  margin-right: 5px;
+}
+
+#quoteText {
   color: #111;
   font-size: 2.2em;
 }
 
 #author {
   font-size: 1.8em;
+}
+
+/* Need to override color here, default for .btn is blue link text... */
+.btn {
+  color: black;
+  /*border: 1px solid black;*/
 }
 
 /* Scale the quote box and buttons once the screen gets smaller than the set size of 500px (520 for a smoother transition)*/
@@ -47,5 +60,5 @@ body {
 }
 
 .fa-facebook:hover, .fa-linkedin:hover, .fa-fire:hover, .fa-github:hover, .fa-instagram:hover {
-    color: #F78536;
+  color: #FF5800;
 }

@@ -5,7 +5,7 @@ jsonUrl = "https://wisdomapi.herokuapp.com/v1/random?jsonp=?";
 // Factor out the getQuote action so we can automatically call it on page load, and manually on clicking the new quote button
 var getQuote = function(json) {
   // console.log(json);
-  $("#quote-text").hide();
+  $("#quoteText").hide();
   $("#author").hide();
 
   var quote = json.content;
@@ -15,8 +15,8 @@ var getQuote = function(json) {
   }
 
   // Update the quote and author fields by id
-  $("#quote-text").text(quote).fadeIn();
-  $("#author").text(author).fadeIn();
+  $("#quoteText").text(quote).fadeIn();
+  $("#author").text("-" + author).fadeIn();
 
   // update href in the twitter button to have url including this quote
   var twitterUrl = 'https://twitter.com/intent/tweet?text="' + quote + '" - ' + author;
@@ -26,9 +26,14 @@ var getQuote = function(json) {
 // On load, get an initial quote
 $(document).ready(function() {
   $.getJSON(jsonUrl, getQuote);
-});
 
-// Load a quote if the quote button is clicked
-$("#quoteBtn").click(function() {
-  $.getJSON(jsonUrl, getQuote);
+  // Load a quote if the quote button is clicked
+  $("#quoteBtn").click(function() {
+    $.getJSON(jsonUrl, getQuote);
+  });
+
+  // Remove focus from buttons after they are clicked (looks ugly)
+  $('.btn').mouseup(function() {
+    this.blur();
+  });
 });
