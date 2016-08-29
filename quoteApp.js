@@ -14,12 +14,14 @@ $(document).ready(function() {
 */
 
 // Store our json object url in one short variable for cleaner code
-jsonUrl = "https://api.forismatic.com/api/1.0/?method=getQuote&key=457653&format=jsonp&lang=en&jsonp=?";
+// jsonUrl = "https://api.forismatic.com/api/1.0/?method=getQuote&key=457653&format=jsonp&lang=en&jsonp=?";
+jsonUrl = "https://wisdomapi.herokuapp.com/v1/random?jsonp=?";
 
 // Factor out the getQuote action so we can automatically call it on page load, and manually on clicking the new quote button
 var getQuote = function(json) {
-  var quote = json.quoteText;
-  var author = json.quoteAuthor;
+  console.log(json);
+  var quote = json.content;
+  var author = json.author.name;
   if (author === '') {
     author = 'Unknown';
   }
