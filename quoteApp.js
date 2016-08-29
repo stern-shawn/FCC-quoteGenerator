@@ -31,7 +31,7 @@ var getQuote = function(json) {
   $("#author").text(author);
 
   // update href in the twitter button to have url including this quote
-  var twitterUrl = 'https://twitter.com/intent/tweet?text=' + quote + ' -' + author;
+  var twitterUrl = 'https://twitter.com/intent/tweet?text="' + quote + '" - ' + author;
   $("#twitter-share").attr("href", twitterUrl);
 };
 
