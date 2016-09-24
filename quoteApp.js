@@ -5,8 +5,9 @@ jsonUrl = "https://wisdomapi.herokuapp.com/v1/random?jsonp=?";
 // Factor out the getQuote action so we can automatically call it on page load, and manually on clicking the new quote button
 var getQuote = function(json) {
   // console.log(json);
-  $("#quoteText").hide();
-  $("#author").hide();
+  $("quoteContainer").hide();
+  // $("#quoteText").hide();
+  // $("#author").hide();
 
   var quote = json.content;
   var author = json.author.name;
@@ -15,6 +16,7 @@ var getQuote = function(json) {
   }
 
   // Update the quote and author fields by id
+  $('#quoteMark').fadeIn();
   $("#quoteText").text(quote).fadeIn();
   $("#author").text("-" + author).fadeIn();
 
@@ -26,6 +28,8 @@ var getQuote = function(json) {
 // On load, get an initial quote
 $(document).ready(function() {
   $.getJSON(jsonUrl, getQuote);
+  $('#quoteMark').hide();
+  $('#quoteText').text("Loading quotes...");
 
   // Load a quote if the quote button is clicked
   $("#quoteBtn").click(function() {
