@@ -41,4 +41,5 @@ TODO:
 * ~~Restyle app~~
 * ~~Add animations~~
 * ~~Clean up redundant divs, classes, and CSS attributes~~
+* ~~Add a loading placeholder for the initial quote, since the first call to the API is slow as mentioned below~~
 * Future restyling and/or find a faster API? Current one takes awhile to get started because of its hosting on Heroku...
