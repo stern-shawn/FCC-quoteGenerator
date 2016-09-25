@@ -5,9 +5,8 @@ jsonUrl = "https://wisdomapi.herokuapp.com/v1/random?jsonp=?";
 // Factor out the getQuote action so we can automatically call it on page load, and manually on clicking the new quote button
 var getQuote = function(json) {
   // console.log(json);
-  $("quoteContainer").hide();
-  // $("#quoteText").hide();
-  // $("#author").hide();
+  $("#quoteText").hide();
+  $("#author").hide();
 
   var quote = json.content;
   var author = json.author.name;
