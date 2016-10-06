@@ -26,9 +26,10 @@ var getQuote = function(json) {
 
 // On load, get an initial quote
 $(document).ready(function() {
-  $.getJSON(jsonUrl, getQuote);
   $('#quoteMark').hide();
-  $('#quoteText').text("Loading quotes...");
+  $('#quoteText').html('<i class="fa fa-refresh fa-spin"></i> Loading quotes...');
+
+  $.getJSON(jsonUrl, getQuote);
 
   // Load a quote if the quote button is clicked
   $("#quoteBtn").click(function() {
